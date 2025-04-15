@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页 - 精品课程信息系统</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- 共享样式 -->
+    <style>
+        /* 可以添加此页面的特定样式 */
+        #user-info { margin-bottom: 20px; padding: 10px; background-color: #eee; border-radius: 4px; text-align: right;}
+        nav ul { list-style: none; padding: 0; margin: 20px 0; background-color: #ddd; overflow: hidden; }
+        nav ul li { float: left; }
+        nav ul li a { display: block; color: #333; text-align: center; padding: 14px 16px; text-decoration: none; }
+        nav ul li a:hover { background-color: #bbb; }
+        .content-area { padding: 20px; background-color: #fff; border-radius: 4px; min-height: 300px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="user-info">
+            <!-- 用户信息和登出按钮将由 JS 填充 -->
+            <span>欢迎您！</span> <button id="logout-button" style="display: none;">登出</button>
+        </div>
+
+        <h1>精品课程信息系统</h1>
+
+        <nav id="main-nav">
+            <ul>
+                <!-- 导航链接将根据用户角色由 JS 添加 -->
+                <li><a href="/">首页</a></li>
+                <!-- 示例：<li><a href="#courses">课程列表</a></li> -->
+                <!-- 示例：<li><a href="#my-selections">我的选课</a></li> -->
+                <!-- 示例：<li><a href="#manage-courses">课程管理</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="content-area" id="main-content">
+            <h2>欢迎</h2>
+            <p>请通过上方导航访问系统功能。</p>
+            <!-- 内容区域将根据导航选择由 JS 更新 -->
+        </div>
+
+    </div>
+
+    <script src="/js/api.js"></script> <!-- (可选) 封装 API 请求 -->
+    <script src="/js/main.js"></script> <!-- 主页逻辑 -->
+</body>
+</html>

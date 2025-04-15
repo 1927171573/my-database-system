@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 精品课程信息系统</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- URL 路径从根开始 -->
+</head>
+<body>
+    <div class="container">
+        <h1>用户登录</h1>
+        <form id="login-form">
+            <div> <label for="user-type">用户类型:</label> <select id="user-type" name="userType" required> <option value="student" selected>学生</option> <option value="teacher">教师</option> <option value="admin">管理员</option> </select> </div>
+            <div> <label for="username">账号:</label> <input type="text" id="username" name="username" placeholder="输入学号/教师号/管理员ID" required> </div>
+            <div> <label for="password">密码:</label> <input type="password" id="password" name="password" placeholder="输入密码" required> </div>
+            <button type="submit">登录</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+        <p>还没有账号? <a href="/register.html">立即注册</a></p> <!-- URL 路径从根开始 -->
+    </div>
+    <script src="/js/auth.js"></script> <!-- URL 路径从根开始 -->
+</body>
+</html>

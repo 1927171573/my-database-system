@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 精品课程信息系统</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- URL 路径从根开始 -->
+</head>
+<body>
+    <div class="container">
+        <h1>用户注册</h1>
+        <form id="register-form">
+            <div> <label for="register-user-type">注册为:</label> <select id="register-user-type" name="registerUserType" required> <option value="student" selected>学生</option> <option value="teacher">教师</option> </select> </div>
+            <div> <label for="register-id">账号:</label> <input type="text" id="register-id" name="registerId" placeholder="输入学号/教师号" required> </div>
+            <div> <label for="register-name">姓名:</label> <input type="text" id="register-name" name="registerName" placeholder="输入真实姓名" required> </div>
+            <div> <label for="register-password">密码:</label> <input type="password" id="register-password" name="registerPassword" placeholder="输入密码" required> </div>
+            <div> <label for="register-confirm-password">确认密码:</label> <input type="password" id="register-confirm-password" name="registerConfirmPassword" placeholder="再次输入密码" required> </div>
+            <div id="student-fields">
+                <div> <label for="register-gender">性别:</label> <select id="register-gender" name="registerGender"> <option value="男">男</option> <option value="女">女</option> <option value="其他">其他</option> </select> </div>
+                <div> <label for="register-age">年龄:</label> <input type="number" id="register-age" name="registerAge" placeholder="输入年龄"> </div>
+            </div>
+            <div id="teacher-fields" style="display: none;">
+                <div> <label for="register-teacher-age">年龄:</label> <input type="number" id="register-teacher-age" name="registerTeacherAge" placeholder="输入年龄"> </div>
+                <div> <label for="register-title">职称:</label> <input type="text" id="register-title" name="registerTitle" placeholder="例如：教授, 副教授"> </div>
+            </div>
+            <button type="submit">注册</button>
+            <p id="register-error-message" class="error-message"></p>
+            <p id="register-success-message" class="success-message"></p>
+        </form>
+        <p>已有账号? <a href="/login.html">立即登录</a></p> <!-- URL 路径从根开始 -->
+    </div>
+    <script src="/js/register.js"></script> <!-- URL 路径从根开始 -->
+</body>
+</html>
